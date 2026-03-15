@@ -9,8 +9,8 @@ body {
 
 a {
     text-decoration: none;
-    color: #C9A2
-}27; 
+    color: #C9A227;
+} 
 
 h1, h2, h3 {
     margin: 0;
@@ -27,25 +27,25 @@ header {
 }
 
 header h1 {
-    font-family: 'Georgia', serif;
-    font-size: 32px;
-    color: #C9A227; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 34px;
+    color: #e3c870; 
 }
 
-nav a {
-    margin-left: 25px;
-    font-weight: bold;
-    font-size: 16px;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
 }
 
-nav a:hover {
+nav ul li a:hover {
     color: #F48CA7;
 }
 
 /* Hero Section */
 .hero {
-    height: 500px;
-    background-image: url("c:\\Users\\natti\\Downloads\\pngtree-perfume-bottle-and-vintage-fragrance-on-glamour-vanity-table-at-night-image_15726699.jpg"); 
+    height: 380px;
+    background-image: url("c:\\Users\\natti\\Downloads\\a-beautiful-composition-with-an-elegant-perfume-bottle-pink-roses-a-gold-necklace-and-a-satin-ribbon-delicate-satin-beige-background-photo.jpg"); 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -54,7 +54,6 @@ nav a:hover {
     align-items: center;
     text-align: center;
     color: white;
-    padding: 0 20px;
 }
 
 .hero h1 {
@@ -103,31 +102,32 @@ nav a:hover {
 }
 
 /* Featured Products */
-.products {
+.featured-products {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff7f0;
+}    
+
+.products-grid {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap; 
-}siv
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
 
-.product {
-    width: 220px;
-    text-align: center;
-    background-color: #FFF0F5; 
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
 }
 
 .product img {
-    width: 100%;
+    width: 200px;
     border-radius: 8px;
-    margin-bottom: 10px;
+    text-align: center;
 }
 
 .product p {
     font-weight: bold;
-    color: #C9A227; 
+    color: #C9A227;
+}
+
 
 .product:hover {
     transform: translateY(-5px);
