@@ -5,103 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verve & Vine Cosmetics</title>
     <link rel="stylesheet" href="verve.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-    <!--  HEADER AND HERO SECTION  -->
+   
     <header>
-        <section class="hero">
-
-            <!-- Navigation Bar -->
-            <nav class="hero-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-
-            <!-- Logo -->
-            <div class="hero-logo">
-                <h1>Verve & Vine Cosmetics</h1>
-            </div>
-
-            <!-- Hero Content -->
-            <div class="hero-content">
-                <h2>Glow Naturally. Shine Effortlessly. ✨🌿</h2>
-                <p>Discover the essence of natural beauty with Verve & Vine Cosmetics. Our products are crafted with care to enhance your natural glow.</p>
-                <button>Shop Now 🛍️</button>
-            </div>
-
-        </section>
-    </header>
-
-    <!-- MAIN CONTENT -->
-    <main>
-
-        <!-- Featured Products Section -->
-        <section class="featured-products">
-            <h2>Our Featured Products &#x2728;</h2>
-            <div class="products-grid">
-                <div class="product">
-                    <img src="c:\Users\natti\Downloads\Wholesale-Vegan-No-Logo-Lipgloss-Private-Label-Custom-Logo-Lipgloss-with-Glitter.avif" alt="Hydrating Lip Gloss">
-                    <h3>Hydrating Lip Gloss 💄</h3>
-                    <p>$12.95</p>
-                </div>
-                <div class="product">
-                    <img src="c:\Users\natti\Downloads\6f9d00fe-318e-4623-b1f6-0e363ffc52ce-thumbnail.jpg" alt="Oh So Heavenly Nourishing Body Lotion">
-                    <h3>Oh So Heavenly Nourishing Body Lotion 🧴</h3>
-                    <p>$47.99</p>
-                </div>
-                <div class="product">
-                    <img src="c:\Users\natti\Downloads\s-l1200.jpg" alt="Luxurious Perfume">
-                    <h3>Luxurious Perfume 🌸</h3>
-                    <p>$124.99</p>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">Verve & Vine</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </section>
+         </nav>
 
-        <!-- Why Choose Us Section -->
-        <section class="Why-Choose-Us">
-            <h2>Why Choose Verve & Vine? &#x1F339;</h2>
-            <div class="why-choose-container">
-                <div class="why-choose-us">
-                    <strong>Natural Ingredients 🌿</strong>
-                    <p>Our products are delicate, making sure that your skin is kept healthy and radiant. We use only the finest natural ingredients, free from harmful chemicals and toxins.</p>
-                </div>
-                <div class="why-choose-us">
-                    <strong>Cruelty-Free Luxury 🐰</strong>
-                    <p>At Verve & Vine, you indulge in beauty that is luxurious, ethical, and kind to the world.</p>
-                </div>
-                <div class="why-choose-us">
-                    <strong>Inclusive Beauty 💖</strong>
-                    <p>We celebrate diversity and offer a wide range of shades and products for all skin tones and types.</p>
+                </header>
+    
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>Welcome to Verve & Vine Cosmetics</h1>
+                <p>We offer luxurious and top quality cosmetics and elegant jewellery designed to wnhance ypur natural beauty and boost your confidence. Stick around to explore and discover our latest collections.</p>
+            </div>
+       </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Featured Products</h5>
+                        <p class="card-text">Check out our latest and greatest products!</p>
+                    </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Call to Action Section -->
-        <section class="cta-section">
-            <h2>Ready to Shine Naturally?</h2>
-            <p>Explore our luxurious collection and discover your perfect glow ✨🌿</p>
-            <a href="products.html" class="cta-button">Shop Now 🛍️</a>
-        </section>
-
+        </div>
     </main>
 
-    <!-- FOOTER-->
+
+    <!-- footer -->
     <footer>
         <div class="footer-content">
             <p>© 2026 Verve & Vine. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#">Instagram 📸</a>
-                <a href="#">Facebook 👍</a>
-                <a href="#">TikTok 🎵</a>
-            </div>
-            <p class="footer-note">Designed with care ✨</p>
+           <p class="footer-note">Designed with care ✨</p>
         </div>
     </footer>
+
+<!-- Bootstrap JS and dependencies -->
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
