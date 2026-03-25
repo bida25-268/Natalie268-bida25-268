@@ -1,93 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - Verve & Vine Cosmetics</title>
-    <link rel="stylesheet" href="verve.css">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products | Verve & Vine</title>
 
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="verve.css">
+
+<style>
+    table img { border-radius: 8px; }
+    table th { background-color: #f8f1f5; color: #5a3d4d; }
+    table td { vertical-align: middle; }
+    .btn-main { background-color: #a06c8f; color: white; border-radius: 8px; }
+    .btn-main:hover { background-color: #824d71; }
+</style>
 </head>
+
 <body>
 
-    <!--  HEADER AND HERO SECTION  -->
-    <header>
-        <section class="hero">
-            
-            <!-- Navigation Bar -->
-            <nav class="hero-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+<div class="container">
+<a class="navbar-brand" href="index.html">Verve & Vine</a>
 
-            <!-- Logo -->
-            <div class="hero-logo">
-                <h1>Verve & Vine Cosmetics</h1>
-            </div>
+<ul class="navbar-nav ms-auto d-flex flex-row gap-3">
+    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+    <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+    <li class="nav-item"><a class="nav-link" href="contact.html">
+        Contact</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">
+        Cart 🛒 <span id="cart-count">0</span>
+    </a></li>
+</ul>
+</div>
+</nav>
 
-            <!-- Hero Content -->
-            <div class="hero-content">
-                <h2>Our Luxurious Collection ✨🌿</h2>
-                <p>Browse Verve & Vine's range of natural, ethical, and inclusive beauty products. Find the perfect glow for you!</p>
-            </div>
+<!-- HEADER -->
+<div class="container my-5 text-center">
+<h1 class="hero-title">Our Products</h1>
+<p class="hero-text">Browse our luxurious collection and add items to your cart</p>
+</div>
 
-        </section>
-    </header>
+<!-- PRODUCTS TABLE -->
+<div class="container my-5">
+<table class="table table-bordered table-hover text-center align-middle">
+<thead class="table-light">
+<tr>
+    <th>Image</th>
+    <th>Product Name</th>
+    <th>Description</th>
+    <th>Price (Pula)</th>
+    <th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td><img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519" width="100" alt="Body Lotion"></td>
+    <td>Body Lotion</td>
+    <td>Hydrating lotion with a soft fragrance.</td>
+    <td data-price="120">P120</td>
+    <td><button class="btn btn-main btn-sm" onclick="addToCart('Body Lotion', 120)">Add to Cart</button></td>
+</tr>
+<tr>
+    <td><img src="https://images.unsplash.com/photo-1585386959984-a41552231658" width="100" alt="Body Wash"></td>
+    <td>Body Wash</td>
+    <td>Refreshing cleanser for soft skin.</td>
+    <td data-price="95">P95</td>
+    <td><button class="btn btn-main btn-sm" onclick="addToCart('Body Wash', 95)">Add to Cart</button></td>
+</tr>
+<tr>
+    <td><img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd" width="100" alt="Perfume"></td>
+    <td>Perfume</td>
+    <td>Elegant long-lasting floral fragrance.</td>
+    <td data-price="250">P250</td>
+    <td><button class="btn btn-main btn-sm" onclick="addToCart('Perfume', 250)">Add to Cart</button></td>
+</tr>
+</tbody>
+</table>
+</div>
 
-    <!--  MAIN CONTENT -->
-    <main>
+<!-- CART TABLE -->
+<div class="container my-5">
+<h2 class="text-center mb-4">Your Cart</h2>
+<table class="table table-bordered text-center align-middle" id="cart-table">
+<thead class="table-light">
+<tr>
+<th>Product</th>
+<th>Price (Pula)</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<!-- JS fills this -->
+</tbody>
+<tfoot>
+<tr>
+<th>Total</th>
+<th id="total-price">P0</th>
+<th></th>
+</tr>
+</tfoot>
+</table>
+</div>
 
-        <!-- Products Grid Section -->
-        <section class="all-products">
-            <h2>All Products</h2>
-            <div class="products-grid">
-                <!-- Product 1 -->
-                <div class="product">
-                    <img src="c:\Users\natti\Downloads\Wholesale-Vegan-No-Logo-Lipgloss-Private-Label-Custom-Logo-Lipgloss-with-Glitter.avif" alt="Hydrating Lip Gloss">
-                    <h3>Hydrating Lip Gloss 💄</h3>
-                    <p>$12.95</p>
-                </div>
+<!-- FOOTER -->
+<footer>
+<p class="text-center">© 2026 Verve & Vine</p>
+<p class="text-center footer-note">Beauty made simple ✨</p>
+</footer>
 
-                <!-- Product 2 -->
-                <div class="product">
-                    <img src="c:\Users\natti\Downloads\6f9d00fe-318e-4623-b1f6-0e363ffc52ce-thumbnail.jpg" alt="Oh So Heavenly Nourishing Body Lotion">
-                    <h3>Oh So Heavenly Nourishing Body Lotion 🧴</h3>
-                    <p>$47.99</p>
-                </div>
+<!-- JS -->
+<script>
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+updateCartDisplay();
+updateCartCount();
 
-                <!-- Product 3 -->
-                <div class="product">
-                    <img src="c:\Users\natti\Downloads\s-l1200.jpg" alt="Luxurious Perfume">
-                    <h3>Luxurious Perfume 🌸</h3>
-                    <p>$124.99</p>
-                </div>
+function addToCart(name, price) {
+    cart.push({name, price});
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartDisplay();
+    updateCartCount();
+}
 
-                <!-- Add more products here if needed -->
-            </div>
-        </section>
+function removeItem(index) {
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartDisplay();
+    updateCartCount();
+}
 
-    </main>
+function updateCartDisplay() {
+    const tbody = document.querySelector('#cart-table tbody');
+    tbody.innerHTML = '';
+    let total = 0;
+    cart.forEach((item, index) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${item.name}</td>
+            <td>P${item.price}</td>
+            <td><button class="btn btn-danger btn-sm" onclick="removeItem(${index})">Remove</button></td>
+        `;
+        tbody.appendChild(row);
+        total += item.price;
+    });
+    document.getElementById('total-price').innerText = `P${total}`;
+}
 
-    <!--  FOOTER  -->
-    <footer>
-        <div class="footer-content">
-            <p>© 2026 Verve & Vine. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#">Instagram 📸</a>
-                <a href="#">Facebook 👍</a>
-                <a href="#">TikTok 🎵</a>
-            </div>
-            <p class="footer-note">Designed with care ✨</p>
-        </div>
-    </footer>
+function updateCartCount() {
+    document.getElementById('cart-count').innerText = cart.length;
+}
+</script>
 
-<!-- Bootstrap JS and dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

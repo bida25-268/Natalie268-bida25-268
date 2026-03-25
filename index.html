@@ -3,72 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verve & Vine Cosmetics</title>
+    <title>Verve & Vine</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="verve.css">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
 
-   
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand" href="#">Verve & Vine</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="products.html">Products</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-         </nav>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="#">Verve & Vine</a>
 
-                </header>
-    
-    <main class="container my-5">
-        <div class="row">
-            <div class="col-md-8">
-                <h1>Welcome to Verve & Vine Cosmetics</h1>
-                <p>We offer luxurious and top quality cosmetics and elegant jewellery designed to wnhance ypur natural beauty and boost your confidence. Stick around to explore and discover our latest collections.</p>
-            </div>
-       </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Featured Products</h5>
-                        <p class="card-text">Check out our latest and greatest products!</p>
-                    </div>
-                </div>
+        <ul class="navbar-nav ms-auto d-flex flex-row gap-3">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<div class="container my-5">
+    <div class="row align-items-center">
+
+        <div class="col-md-6">
+            <h1 class="hero-title">Enhance Your Natural Beauty</h1>
+            <p class="hero-text">
+                At Verve & Vine, we believe beauty should feel effortless. 
+                Our carefully selected cosmetics and fragrances are designed 
+                to make you feel confident, radiant, and unique every day.
+            </p>
+            <a href="products.html" class="btn btn-main">Shop Now</a>
+        </div>
+
+        <div class="col-md-6">
+            <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30"
+                 class="img-fluid rounded"
+                 alt="Perfume display">
+        </div>
+
+    </div>
+</div>
+
+<!-- ABOUT / DESCRIPTION -->
+<div class="container my-5 text-center">
+    <h2 class="section-title">Who We Are</h2>
+    <p class="w-75 mx-auto">
+        Verve & Vine is a beauty brand dedicated to providing high-quality skincare, 
+        body care, and fragrances. Our products are inspired by elegance and simplicity, 
+        helping you express your beauty in the most natural way possible.
+    </p>
+</div>
+
+<!-- WHY CHOOSE US -->
+<div class="container my-5">
+    <h2 class="section-title text-center">Why Choose Us</h2>
+
+    <div class="row text-center">
+
+        <div class="col-md-4">
+            <div class="info-box">
+                <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519"
+                     class="img-fluid rounded mb-3"
+                     alt="Quality products">
+
+                <h5>High Quality Products</h5>
+                <p>We use carefully selected ingredients to ensure the best results for your skin.</p>
             </div>
         </div>
-    </main>
 
+        <div class="col-md-4">
+            <div class="info-box">
+                <img src="https://images.unsplash.com/photo-1585386959984-a41552231658"
+                     class="img-fluid rounded mb-3"
+                     alt="Affordable beauty">
 
-    <!-- footer -->
-    <footer>
-        <div class="footer-content">
-            <p>© 2026 Verve & Vine. All rights reserved.</p>
-           <p class="footer-note">Designed with care ✨</p>
+                <h5>Affordable Luxury</h5>
+                <p>Enjoy premium beauty products at prices that fit your budget.</p>
+            </div>
         </div>
-    </footer>
 
-<!-- Bootstrap JS and dependencies -->
- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <div class="col-md-4">
+            <div class="info-box">
+                <img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd"
+                     class="img-fluid rounded mb-3"
+                     alt="Customer satisfaction">
+
+                <h5>Customer Satisfaction</h5>
+                <p>Your happiness is our priority. We aim to give you the best experience.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- FEATURED PRODUCTS -->
+<div class="container my-5">
+
+    <h2 class="section-title text-center">Featured Products</h2>
+
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519"
+                     class="img-fluid"
+                     alt="Lotion">
+                <h5>Body Lotion</h5>
+                <p>Deep hydration with a soft fragrance.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1585386959984-a41552231658"
+                     class="img-fluid"
+                     alt="Body Wash">
+                <h5>Body Wash</h5>
+                <p>Refreshing and gentle for daily use.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd"
+                     class="img-fluid"
+                     alt="Perfume">
+                <h5>Perfume</h5>
+                <p>Long-lasting fragrance for every occasion.</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Verve & Vine</p>
+    <p class="footer-note">Elegance. Simplicity. Confidence ✨</p>
+</footer>
 
 </body>
 </html>

@@ -1,198 +1,47 @@
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #FFF5E9; 
-    color: #333333; 
-}
-
-a {
-    text-decoration: none;
-    color: #C9A227;
-} 
-
-h1, h2, h3 {
-    margin: 0;
-}
-
-/* Navigation Bar */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: #FFF5E9; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-header h1 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 34px;
-    color: #e3c870; 
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-nav ul li a:hover {
-    color: #F48CA7;
-    text-decoration: none;
-}
-
-/* Hero Section */
-.hero {
-    height: 380px;
-    background-image: url("c:\\Users\\natti\\Downloads\\a-beautiful-composition-with-an-elegant-perfume-bottle-pink-roses-a-gold-necklace-and-a-satin-ribbon-delicate-satin-beige-background-photo.jpg"); 
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 22px;
-    margin-bottom: 20px;
-}
-
-.hero button {
-    background-color: #F48CA7; 
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.hero button:hover {
-    background-color: #C9A227; 
-}
-
-/* Introduction Section */
-.intro {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.intro h2 {
-    color: #C9A227; 
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.intro p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #555555;
-}
-
-/* Featured Products */
-.featured-products {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #fff7f0;
-}    
-
-.products-grid {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-
-}
-
-.product img {
-    width: 200px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.product p {
+.hero-title {
+    font-size: 2.5rem;
     font-weight: bold;
-    color: #C9A227;
+    color: #5a3d4d;
 }
 
-
-.product:hover {
-    transform: translateY(-5px);
-}
-
-/*Why choose us section */
-.benefits {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #FFF5E9; 
-}
-
-.benefits h2 {
-    color: #C9A227; 
-    font-size: 36px;
+.hero-text {
+    font-size: 1.1rem;
     margin-bottom: 20px;
 }
 
-.benefits ul {
-    list-style: none;
-    padding: 0;
+.section-title {
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #5a3d4d;
 }
 
-.benefits li {
-    font-size: 18px;
-    margin: 10px 0;
-    color: #555555;
-}
-
-/* Call to Action Section */
-.cta {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.cta p {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.cta button {
-    background-color: #F48CA7; 
+.btn-main {
+    background-color: #a06c8f;
     color: white;
-    border: none;
-    padding: 12px 30px;
-    font-size: 18px;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 25px;
+    padding: 10px 20px;
 }
 
-.cta button:hover {
-    background-color: #C9A227; 
+.btn-main:hover {
+    background-color: #7a4e6d;
 }
 
-/* Footer */
-footer {
-    background-color: #F8C8DC; 
+.product-card {
     text-align: center;
-    padding: 40px 20px;
-    color: #333333;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-footer h2 {
-    color: #C9A227; 
-    margin-bottom: 10px;
+.info-box {
+    padding: 15px;
 }
 
-footer p {
-    margin: 5px 0;
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f1f1f1;
+    margin-top: 40px;
 }
+
