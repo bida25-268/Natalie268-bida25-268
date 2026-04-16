@@ -1,47 +1,130 @@
-.hero-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #5a3d4d;
+
+
+/* Fonts */
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #4b3f36; 
+    background-color: #fdf8f3; 
 }
 
-.hero-text {
-    font-size: 1.1rem;
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #3a2c25; 
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #3a2c25 !important;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #fff6f0 !important; 
+}
+
+.nav-link {
+    color: #5b4636 !important;
+}
+
+.nav-link.active {
+    color: #a87c5f !important; 
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('../images/hero-bg.jpg') center/cover no-repeat;
+    color: #fff8f0;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+.hero-section p {
+    font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
-.section-title {
-    margin-bottom: 30px;
-    font-weight: bold;
-    color: #5a3d4d;
-}
-
+/* Buttons */
 .btn-main {
-    background-color: #a06c8f;
+    background-color: #b68e6c; 
     color: white;
-    border-radius: 25px;
-    padding: 10px 20px;
+    border-radius: 8px;
 }
 
 .btn-main:hover {
-    background-color: #7a4e6d;
+    background-color: #a67c57; 
 }
 
-.product-card {
-    text-align: center;
-    padding: 15px;
-    background: white;
-    border-radius: 10px;
-    margin-bottom: 20px;
+/* Sections */
+.section {
+    padding: 60px 0;
 }
 
-.info-box {
-    padding: 15px;
+/* Cards */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
 }
 
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    font-weight: 600;
+    color: #4b3f36;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #5b4636;
+}
+
+/* Featured Products */
+.featured-products img {
+    border-radius: 12px;
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+/* Tables */
+table th {
+    background-color: #f5ebe0; 
+    color: #4b3f36;
+}
+
+table td {
+    vertical-align: middle;
+    color: #5b4636;
+}
+
+.table-bordered {
+    border-color: #e6d8ca;
+}
+
+/* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
-    background: #f1f1f1;
-    margin-top: 40px;
+    background-color: #3a2c25; 
+    color: #fdf8f3;
+    padding: 40px 0;
+}
+
+footer p, footer .footer-note {
+    margin: 0;
+}
+
+/* Misc */
+img {
+    border-radius: 8px;
 }
 

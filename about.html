@@ -1,139 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Verve & Vine</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Verve & Vine</title>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="verve.css">
+<!-- CSS -->
+<link rel="stylesheet" href="verve.css">
+
+<style>
+    body { background-color: #faf7f2; color: #3e2f25; }
+
+    .navbar { background-color: #f6f1eb !important; }
+    .navbar-brand { color: #5a4636 !important; font-weight: 600; }
+    .nav-link { color: #6b5444 !important; }
+    .nav-link.active { color: #3e2f25 !important; font-weight: 500; }
+
+    .hero-title { color: #4a3b2f; }
+    .hero-text { color: #7a6656; }
+
+    .section-title { color: #4a3b2f; margin-bottom: 20px; }
+    .section-text { color: #6b5444; }
+
+    .about-box {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    footer {
+        background-color: #f4efe9;
+        padding: 20px 0;
+        color: #6b5444;
+    }
+
+    .footer-note { color: #9c8775; }
+</style>
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">Verve & Vine</a>
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+<div class="container">
+<a class="navbar-brand" href="index.html">Verve & Vine</a>
 
-        <ul class="navbar-nav ms-auto d-flex flex-row gap-3">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-            <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-    </div>
+<ul class="navbar-nav ms-auto d-flex flex-row gap-3">
+    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Cart 🛒</a></li>
+</ul>
+</div>
 </nav>
 
-<!-- HERO -->
-<div class="container my-5 text-center">
-    <h1 class="hero-title">About Verve & Vine</h1>
-    <p class="hero-text w-75 mx-auto">
-        Discover the story behind our passion for beauty, elegance, and confidence.
-    </p>
-</div>
 
-<!-- WHO WE ARE -->
-<div class="container my-5">
-    <div class="row align-items-center">
-
-        <div class="col-md-6">
-            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9"
-                 class="img-fluid rounded"
-                 alt="Beauty products">
-        </div>
-
-        <div class="col-md-6">
-            <h2 class="section-title">Who We Are</h2>
-            <p>
-                Verve & Vine is a modern beauty brand focused on creating high-quality 
-                skincare, body care, and fragrance products. We believe that beauty 
-                should be simple, natural, and accessible to everyone.
-            </p>
-            <p>
-                Our collections are carefully curated to bring out confidence and elegance 
-                in every individual, helping you feel your best every day.
-            </p>
-        </div>
-
-    </div>
-</div>
-
-<!-- MISSION & VISION -->
-<div class="container my-5 text-center">
-    <h2 class="section-title">Our Mission & Vision</h2>
-
-    <div class="row mt-4">
-
-        <div class="col-md-6">
-            <div class="info-box">
-                <h4>Our Mission</h4>
-                <p>
-                    To provide high-quality, affordable beauty products that enhance 
-                    natural beauty and boost confidence.
-                </p>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="info-box">
-                <h4>Our Vision</h4>
-                <p>
-                    To become a trusted beauty brand known for elegance, simplicity, 
-                    and customer satisfaction.
-                </p>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<!-- OUR VALUES -->
-<div class="container my-5">
-    <h2 class="section-title text-center">Our Values</h2>
-
-    <div class="row text-center mt-4">
-
-        <div class="col-md-4">
-            <div class="info-box">
-                <h5>Quality</h5>
-                <p>We prioritize excellence in every product we create.</p>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="info-box">
-                <h5>Elegance</h5>
-                <p>We believe beauty should feel refined and effortless.</p>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="info-box">
-                <h5>Customer Care</h5>
-                <p>Your satisfaction is at the heart of everything we do.</p>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<!-- OPTIONAL TEAM SECTION -->
-<div class="container my-5 text-center">
-    <h2 class="section-title">Our Team</h2>
-    <p class="w-75 mx-auto">
-        Our team is passionate about beauty and committed to bringing you products 
-        that inspire confidence and self-expression.
-    </p>
-</div>
 
 <!-- FOOTER -->
 <footer>
-    <p>© 2026 Verve & Vine</p>
-    <p class="footer-note">Crafted with passion ✨</p>
+<p class="text-center">© 2026 Verve & Vine</p>
+<p class="text-center footer-note">Beauty made simple ✨</p>
 </footer>
 
 </body>
