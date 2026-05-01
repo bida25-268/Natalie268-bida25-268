@@ -10,13 +10,44 @@
 
 <!-- CSS -->
 <link rel="stylesheet" href="verve.css">
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+/* Subtle luxury hover glow */
+.product-card {
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* Soft fade-in effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg px-4">
-<a class="navbar-brand fw-bold" href="index.html">Verve & Vine</a>
+<nav class="navbar navbar-expand-lg px-4 fade-in">
+<a class="navbar-brand fw-bold" href="index.html">Verve & Vine 🌿</a>
 
 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
 <span class="navbar-toggler-icon"></span>
@@ -33,32 +64,32 @@
 </div>
 </nav>
 
-<!-- HERO SECTION -->
-<section class="text-center p-5">
+<!-- HERO -->
+<section class="text-center p-5 fade-in">
 <div class="container">
 
-<img src="WMD Images/360_F_315310736_RZFiNuzYcRSXZ9I3ZHKVuiqbNBVfiOW0.jpg" class="img-fluid rounded mb-3" alt="Beauty products display">
+<img src="WMD Images/360_F_315310736_RZFiNuzYcRSXZ9I3ZHKVuiqbNBVfiOW0.jpg" class="img-fluid rounded mb-3">
 
-<h2>Botanical Beauty, Refined.</h2>
-<h4>Nature Meets Elegance</h4>
+<h2>Botanical Beauty, Refined. 🌿</h2>
+<h4>Nature Meets Elegance ✨</h4>
 
 <p class="mt-3">
 Discover our curated collection of botanical-infused cosmetics crafted for the modern individual.
 </p>
 
-<a href="products.html" class="btn btn-dark mt-3">Shop Now</a>
+<a href="products.html" class="btn btn-dark mt-3">Shop Now 🛍️</a>
 
 </div>
 </section>
 
-<!-- PROMO BAR -->
-<section class="text-center p-3">
-<p><strong>Free shipping on Orders Over $50</strong></p>
-<p>Use code VINE30 at checkout</p>
+<!-- PROMO -->
+<section class="text-center p-3 fade-in">
+<p><strong>Free shipping on Orders Over $50 🚚</strong></p>
+<p>Use code VINE30 at checkout ✨</p>
 </section>
 
-<!-- ABOUT PREVIEW -->
-<section class="container my-5">
+<!-- ABOUT -->
+<section class="container my-5 fade-in">
 <div class="row align-items-center g-4">
 
 <div class="col-md-6">
@@ -67,135 +98,151 @@ class="img-fluid rounded">
 </div>
 
 <div class="col-md-6">
-<h3>Who We Are</h3>
+<h3>Who We Are 🌸</h3>
 
 <p>
-Verve & Vine is a lifestyle brand dedicated to offering high-quality,
-stylish, and sustainable beauty and wellness products.
+Verve & Vine is a lifestyle brand dedicated to high-quality,
+stylish, and sustainable beauty products.
 </p>
 
 <p>
-We focus on blending elegance with simplicity to create items that enhance everyday living.
+We blend elegance with simplicity to elevate everyday living.
 </p>
 
-<a href="about.html" class="btn btn-outline-dark mt-2">Learn More</a>
+<a href="about.html" class="btn btn-outline-dark mt-2">Learn More ✨</a>
 </div>
 
 </div>
 </section>
 
 <!-- FEATURED CATEGORIES -->
-<section class="container text-center my-5">
-<h2>Featured Categories</h2>
+<section class="container text-center my-5 fade-in">
+<h2>Featured Categories 🌿</h2>
 
 <div class="row mt-4 g-4">
 
 <div class="col-md-3">
-<div class="card product-card">
+<a href="products.html?category=perfume" class="text-decoration-none text-dark">
+<div class="card product-card shadow-sm">
 <img src="WMD Images/prod_35902_1_1_1.webp" class="card-img-top product-img">
 <div class="card-body">
-<h5>Perfume</h5>
+<h5>Perfume ✨</h5>
 </div>
 </div>
+</a>
 </div>
 
 <div class="col-md-3">
-<div class="card product-card">
+<a href="products.html?category=lipgloss" class="text-decoration-none text-dark">
+<div class="card product-card shadow-sm">
 <img src="WMD Images/d7b22caa53775cad8a564e6ff8cb00aa.jpg" class="card-img-top product-img">
 <div class="card-body">
-<h5>Lip Gloss</h5>
+<h5>Lip Gloss 💋</h5>
 </div>
 </div>
+</a>
 </div>
 
 <div class="col-md-3">
-<div class="card product-card">
+<a href="products.html?category=lotion" class="text-decoration-none text-dark">
+<div class="card product-card shadow-sm">
 <img src="WMD Images/fragrantfeelings_royalradiance_bodylotion.jpg" class="card-img-top product-img">
 <div class="card-body">
-<h5>Lotion</h5>
+<h5>Lotion 🧴</h5>
 </div>
 </div>
+</a>
 </div>
 
 <div class="col-md-3">
-<div class="card product-card">
+<a href="products.html?category=bodywash" class="text-decoration-none text-dark">
+<div class="card product-card shadow-sm">
 <img src="WMD Images/Oaty-Goodness-Body-Wash-720-ml-.jpg" class="card-img-top product-img">
 <div class="card-body">
-<h5>Body Wash</h5>
+<h5>Body Wash 🚿</h5>
 </div>
 </div>
+</a>
 </div>
 
 </div>
 </section>
 
 <!-- FEATURED PRODUCTS -->
-<section class="container my-5">
-<h2 class="text-center mb-4">Featured Products</h2>
+<section class="container my-5 fade-in">
+<h2 class="text-center mb-4">Featured Products ✨</h2>
 
 <div class="row g-4">
 
 <div class="col-md-3">
-<div class="card product-card text-center">
+<a href="products.html#rose-gloss" class="text-decoration-none text-dark">
+<div class="card product-card text-center shadow-sm">
 <img src="WMD Images/c90494cd57249655b5122b6425912b66.jpg" class="card-img-top product-img">
 <div class="card-body">
-<h6>Rose Shine Lip Gloss</h6>
+<h6>Rose Shine Lip Gloss 💄</h6>
 </div>
 </div>
+</a>
 </div>
 
 <div class="col-md-3">
-<div class="card product-card text-center">
+<a href="products.html#vanilla-lotion" class="text-decoration-none text-dark">
+<div class="card product-card text-center shadow-sm">
 <img src="WMD Images/Oh so heavenly lotion.jpg" class="card-img-top product-img">
 <div class="card-body">
-<h6>Vanilla Silk Lotion</h6>
+<h6>Vanilla Silk Lotion 🧴</h6>
 </div>
 </div>
+</a>
 </div>
 
 <div class="col-md-3">
-<div class="card product-card text-center">
+<a href="products.html#midnight-perfume" class="text-decoration-none text-dark">
+<div class="card product-card text-center shadow-sm">
 <img src="WMD Images/b9pnqdypapcx.jpg" class="card-img-top product-img">
 <div class="card-body">
-<h6>Midnight Bloom Perfume</h6>
+<h6>Midnight Bloom Perfume 🌙</h6>
 </div>
 </div>
+</a>
 </div>
 
 <div class="col-md-3">
-<div class="card product-card text-center">
+<a href="products.html#mint-bodywash" class="text-decoration-none text-dark">
+<div class="card product-card text-center shadow-sm">
 <img src="WMD Images/download (7).jpg" class="card-img-top product-img">
 <div class="card-body">
-<h6>Fresh Mint Body Wash</h6>
+<h6>Fresh Mint Body Wash 🌱</h6>
 </div>
 </div>
+</a>
 </div>
 
 </div>
 </section>
 
 <!-- WHY CHOOSE US -->
-<section class="text-center p-5">
-<h2>Why Choose Verve & Vine?</h2>
+<section class="text-center p-5 fade-in">
+<h2>Why Choose Verve & Vine? 🌿</h2>
 
 <div class="container mt-4">
 <div class="row g-3">
 
 <div class="col-md-4">
-<div class="p-3 border rounded">
-<p>High-quality ingredients</p>
+<div class="p-3 border rounded shadow-sm">
+<p>High-quality ingredients ✨</p>
 </div>
 </div>
 
 <div class="col-md-4">
-<div class="p-3 border rounded">
-<p>Eco-friendly and sustainable products</p>
+<div class="p-3 border rounded shadow-sm">
+<p>Eco-friendly & sustainable 🌱</p>
 </div>
 </div>
 
 <div class="col-md-4">
-<div class="p-3 border rounded">
-<p>Elegant and modern designs</p>
+<div class="p-3 border rounded shadow-sm">
+<p>Elegant modern design 💎</p>
 </div>
 </div>
 
@@ -205,13 +252,16 @@ We focus on blending elegance with simplicity to create items that enhance every
 
 <!-- FOOTER -->
 <footer class="text-center p-3">
-<p>&copy; 2026 Verve & Vine</p>
+<p>&copy; 2026 Verve & Vine 🌿</p>
 </footer>
 
-<!-- BOOTSTRAP JS -->
+<!-- BOOTSTRAP -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
+
+
+
 
 

@@ -10,6 +10,16 @@
 
 <!-- YOUR CSS -->
 <link rel="stylesheet" href="verve.css">
+
+<style>
+.product-detail-img {
+    transition: 0.3s ease;
+}
+
+.product-detail-img:hover {
+    transform: scale(1.05);
+}
+</style>
 </head>
 
 <body>
@@ -27,8 +37,7 @@
 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
 <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-<li class="nav-item"><a class="nav-link active" href="product-details.html">Product Details</a></li>
-<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+<li class="nav-item"><a class="nav-link" href="cart.html">Cart 🛒</a></li>
 </ul>
 </div>
 </nav>
@@ -39,14 +48,14 @@
 <p>Explore more about our featured product</p>
 </section>
 
-<!-- PRODUCT SECTION -->
+<!-- PRODUCT SECTION (UNCHANGED STRUCTURE) -->
 <section class="container my-5">
 <div class="row align-items-center g-4">
 
 <!-- IMAGE -->
 <div class="col-md-6 text-center">
 <img id="productImage"
-src="WMD Images/1d17c720321f1f599dbb81b0232df102.jpg"
+src=""
 class="img-fluid product-detail-img rounded shadow"
 alt="Product">
 </div>
@@ -54,17 +63,16 @@ alt="Product">
 <!-- DETAILS -->
 <div class="col-md-6">
 
-<h3 id="productName">Rose Shine Lip Gloss</h3>
+<h3 id="productName">Loading...</h3>
 
-<p id="productDesc">
-A smooth, lightweight lip gloss that gives a natural pink shine.
-It keeps your lips hydrated while adding a soft glow.
-</p>
+<p id="productDesc"></p>
 
-<p><strong>Category:</strong> Lip Gloss</p>
-<p><strong>Use:</strong> Daily wear, casual and formal looks</p>
+<p><strong>Price:</strong> P<span id="productPrice"></span></p>
 
-<button class="btn btn-dark mt-3" onclick="addToCart()">Add to Cart</button>
+<p><strong>Rating:</strong> <span id="productRating"></span></p>
+
+<button class="btn btn-dark mt-3" onclick="addToCart()">Add to Cart 🛒</button>
+
 <button class="btn btn-outline-dark mt-3" onclick="changeProduct()">View Another Product</button>
 
 </div>
@@ -72,74 +80,116 @@ It keeps your lips hydrated while adding a soft glow.
 </div>
 </section>
 
-<!-- RELATED PRODUCTS -->
-<section class="container text-center my-5">
-<h4>Related Products</h4>
-
-<div class="row mt-4 g-4">
-
-<div class="col-md-3">
-<div class="card product-card text-center">
-<img src="WMD Images/Oh so heavenly lotion.jpg" class="card-img-top product-img">
-<div class="card-body">
-<p>Vanilla Silk Lotion</p>
-</div>
-</div>
-</div>
-
-<div class="col-md-3">
-<div class="card product-card text-center">
-<img src="WMD Images/dbd285bd-33c6-41ae-b24a-54bb0a958fc2.d247ba7667e8a29cbcfd1c608358805b.webp" class="card-img-top product-img">
-<div class="card-body">
-<p>Midnight Bloom Perfume</p>
-</div>
-</div>
-</div>
-
-<div class="col-md-3">
-<div class="card product-card text-center">
-<img src="WMD Images/Oaty-Goodness-Body-Wash-720-ml-.jpg" class="card-img-top product-img">
-<div class="card-body">
-<p>Fresh Mint Body Wash</p>
-</div>
-</div>
-</div>
-
-<div class="col-md-3">
-<div class="card product-card text-center">
-<img src="WMD Images/d7b22caa53775cad8a564e6ff8cb00aa.jpg" class="card-img-top product-img">
-<div class="card-body">
-<p>Clear Glow Lip Gloss</p>
-</div>
-</div>
-</div>
-
-</div>
-</section>
-
-<!-- FOOTER -->
-<footer class="text-center p-3 mt-5">
-<p>&copy; 2026 Verve & Vine</p>
-</footer>
-
 <!-- BOOTSTRAP -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- JS -->
 <script>
-function addToCart() {
-    alert("Item added to cart 🛍️");
+let currentIndex = 0;
+
+// PRODUCT DATABASE (CONNECTED TO CART)
+const products = [
+{
+id: "rose-shine",
+name: "Rose Shine Lip Gloss",
+desc: "Soft pink gloss with hydration and shine.",
+price: 85,
+rating: "★★★★☆ (4.8)",
+img: "WMD Images/1d17c720321f1f599dbb81b0232df102.jpg"
+},
+{
+id: "clear-glow",
+name: "Clear Glow Lip Gloss",
+desc: "Lightweight natural shine gloss.",
+price: 80,
+rating: "★★★★☆ (4.5)",
+img: "WMD Images/d7b22caa53775cad8a564e6ff8cb00aa.jpg"
+},
+{
+id: "rose-kiss",
+name: "Rosé Kiss Lip Gloss",
+desc: "Soft tinted romantic gloss.",
+price: 90,
+rating: "★★★★★ (4.9)",
+img: "WMD Images/c90494cd57249655b5122b6425912b66.jpg"
+},
+{
+id: "midnight-bloom",
+name: "Midnight Bloom Perfume",
+desc: "Elegant floral fragrance for day and night.",
+price: 250,
+rating: "★★★★★ (4.9)",
+img: "WMD Images/dbd285bd-33c6-41ae-b24a-54bb0a958fc2.d247ba7667e8a29cbcfd1c608358805b.webp"
+},
+{
+id: "velvet-rose",
+name: "Velvet Rose Perfume",
+desc: "Soft romantic rose scent.",
+price: 260,
+rating: "★★★★☆ (4.8)",
+img: "WMD Images/prod_35902_1_1_1.webp"
+},
+{
+id: "oaty-goodness",
+name: "Oaty Goodness Body Wash",
+desc: "Gentle oat-based cleansing wash.",
+price: 110,
+rating: "★★★★☆ (4.6)",
+img: "WMD Images/Oaty-Goodness-Body-Wash-720-ml-.jpg"
+}
+];
+
+// GET PRODUCT FROM URL
+const params = new URLSearchParams(window.location.search);
+const productId = params.get("product");
+
+// LOAD PRODUCT
+let currentProduct = products.find(p => p.id === productId) || products[0];
+
+function renderProduct(p) {
+    document.getElementById("productName").innerText = p.name;
+    document.getElementById("productDesc").innerText = p.desc;
+    document.getElementById("productPrice").innerText = p.price;
+    document.getElementById("productRating").innerText = p.rating;
+    document.getElementById("productImage").src = p.img;
+
+    currentProduct = p;
 }
 
-function changeProduct() {
-    document.getElementById("productName").innerText = "Midnight Bloom Perfume";
-    document.getElementById("productDesc").innerText =
-    "An elegant floral fragrance designed for both day and night wear.";
+renderProduct(currentProduct);
 
-    document.getElementById("productImage").src =
-    "WMD Images/dbd285bd-33c6-41ae-b24a-54bb0a958fc2.d247ba7667e8a29cbcfd1c608358805b.webp";
+// ROTATE PRODUCTS
+function changeProduct() {
+    currentIndex = (currentIndex + 1) % products.length;
+    renderProduct(products[currentIndex]);
+}
+
+// CART SYSTEM (CONNECTED TO cart.html)
+function addToCart() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push(currentProduct);
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // animation feedback
+    const btn = document.querySelector(".btn-dark");
+    btn.innerText = "Added ✔";
+    btn.classList.add("btn-success");
+
+    setTimeout(() => {
+        btn.innerText = "Add to Cart 🛒";
+        btn.classList.remove("btn-success");
+    }, 1200);
 }
 </script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
