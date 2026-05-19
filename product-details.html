@@ -1,190 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Verve & Vine | Product Details</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- BOOTSTRAP -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Verve & Vine | Product Details</title>
 
-<!-- YOUR CSS -->
-<link rel="stylesheet" href="verve.css">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<style>
-.product-detail-img {
-    transition: 0.3s ease;
-}
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="verve.css">
 
-.product-detail-img:hover {
-    transform: scale(1.05);
-}
-</style>
+    <!-- PAGE-LEVEL STYLES -->
+    <style>
+        .product-detail-img {
+            transition: 0.3s ease;
+        }
+
+        .product-detail-img:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg px-4">
-<a class="navbar-brand fw-bold" href="index.html">Verve & Vine</a>
+    <!-- ================= NAVIGATION ================= -->
+    <header>
+        <nav class="navbar navbar-expand-lg px-4">
 
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
-<span class="navbar-toggler-icon"></span>
-</button>
+            <a class="navbar-brand fw-bold" href="index.html">
+                Verve & Vine
+            </a>
 
-<div class="collapse navbar-collapse" id="navMenu">
-<ul class="navbar-nav ms-auto">
-<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-<li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-<li class="nav-item"><a class="nav-link" href="cart.html">Cart 🛒</a></li>
-</ul>
-</div>
-</nav>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-<!-- TITLE -->
-<section class="text-center p-5">
-<h2>Product Details</h2>
-<p>Explore more about our featured product</p>
-</section>
+            <div class="collapse navbar-collapse" id="navMenu">
 
-<!-- PRODUCT SECTION (UNCHANGED STRUCTURE) -->
-<section class="container my-5">
-<div class="row align-items-center g-4">
+                <ul class="navbar-nav ms-auto">
 
-<!-- IMAGE -->
-<div class="col-md-6 text-center">
-<img id="productImage"
-src=""
-class="img-fluid product-detail-img rounded shadow"
-alt="Product">
-</div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
 
-<!-- DETAILS -->
-<div class="col-md-6">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
 
-<h3 id="productName">Loading...</h3>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
 
-<p id="productDesc"></p>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Cart 🛒</a>
+                    </li>
 
-<p><strong>Price:</strong> P<span id="productPrice"></span></p>
+                </ul>
 
-<p><strong>Rating:</strong> <span id="productRating"></span></p>
+            </div>
 
-<button class="btn btn-dark mt-3" onclick="addToCart()">Add to Cart 🛒</button>
+        </nav>
+    </header>
 
-<button class="btn btn-outline-dark mt-3" onclick="changeProduct()">View Another Product</button>
+    <!-- ================= PAGE TITLE ================= -->
+    <section class="text-center p-5">
+        <h1>Product Details</h1>
+        <p>Explore more about our featured product</p>
+    </section>
 
-</div>
+    <!-- ================= PRODUCT SECTION ================= -->
+    <main>
 
-</div>
-</section>
+        <section class="container my-5">
 
-<!-- BOOTSTRAP -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <div class="row align-items-center g-4">
 
-<script>
-let currentIndex = 0;
+                <!-- PRODUCT IMAGE -->
+                <div class="col-md-6 text-center">
+                    <figure>
+                        <img
+                            id="productImage"
+                            src=""
+                            class="img-fluid product-detail-img rounded shadow"
+                            alt="Product Image"
+                        >
+                    </figure>
+                </div>
 
-// PRODUCT DATABASE (CONNECTED TO CART)
-const products = [
-{
-id: "rose-shine",
-name: "Rose Shine Lip Gloss",
-desc: "Soft pink gloss with hydration and shine.",
-price: 85,
-rating: "★★★★☆ (4.8)",
-img: "WMD Images/1d17c720321f1f599dbb81b0232df102.jpg"
-},
-{
-id: "clear-glow",
-name: "Clear Glow Lip Gloss",
-desc: "Lightweight natural shine gloss.",
-price: 80,
-rating: "★★★★☆ (4.5)",
-img: "WMD Images/d7b22caa53775cad8a564e6ff8cb00aa.jpg"
-},
-{
-id: "rose-kiss",
-name: "Rosé Kiss Lip Gloss",
-desc: "Soft tinted romantic gloss.",
-price: 90,
-rating: "★★★★★ (4.9)",
-img: "WMD Images/c90494cd57249655b5122b6425912b66.jpg"
-},
-{
-id: "midnight-bloom",
-name: "Midnight Bloom Perfume",
-desc: "Elegant floral fragrance for day and night.",
-price: 250,
-rating: "★★★★★ (4.9)",
-img: "WMD Images/dbd285bd-33c6-41ae-b24a-54bb0a958fc2.d247ba7667e8a29cbcfd1c608358805b.webp"
-},
-{
-id: "velvet-rose",
-name: "Velvet Rose Perfume",
-desc: "Soft romantic rose scent.",
-price: 260,
-rating: "★★★★☆ (4.8)",
-img: "WMD Images/prod_35902_1_1_1.webp"
-},
-{
-id: "oaty-goodness",
-name: "Oaty Goodness Body Wash",
-desc: "Gentle oat-based cleansing wash.",
-price: 110,
-rating: "★★★★☆ (4.6)",
-img: "WMD Images/Oaty-Goodness-Body-Wash-720-ml-.jpg"
-}
-];
+                <!-- PRODUCT INFO -->
+                <div class="col-md-6">
 
-// GET PRODUCT FROM URL
-const params = new URLSearchParams(window.location.search);
-const productId = params.get("product");
+                    <article>
 
-// LOAD PRODUCT
-let currentProduct = products.find(p => p.id === productId) || products[0];
+                        <h2 id="productName">Loading...</h2>
 
-function renderProduct(p) {
-    document.getElementById("productName").innerText = p.name;
-    document.getElementById("productDesc").innerText = p.desc;
-    document.getElementById("productPrice").innerText = p.price;
-    document.getElementById("productRating").innerText = p.rating;
-    document.getElementById("productImage").src = p.img;
+                        <p id="productDesc"></p>
 
-    currentProduct = p;
-}
+                        <p>
+                            <strong>Price:</strong> P<span id="productPrice"></span>
+                        </p>
 
-renderProduct(currentProduct);
+                        <p>
+                            <strong>Rating:</strong> <span id="productRating"></span>
+                        </p>
 
-// ROTATE PRODUCTS
-function changeProduct() {
-    currentIndex = (currentIndex + 1) % products.length;
-    renderProduct(products[currentIndex]);
-}
+                        <!-- ACTION BUTTONS -->
+                        <div class="mt-3">
 
-// CART SYSTEM (CONNECTED TO cart.html)
-function addToCart() {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                            <button class="btn btn-dark" onclick="addToCart()">
+                                Add to Cart 🛒
+                            </button>
 
-    cart.push(currentProduct);
-    localStorage.setItem("cart", JSON.stringify(cart));
+                            <button class="btn btn-outline-dark ms-2" onclick="changeProduct()">
+                                View Another Product
+                            </button>
 
-    // animation feedback
-    const btn = document.querySelector(".btn-dark");
-    btn.innerText = "Added ✔";
-    btn.classList.add("btn-success");
+                        </div>
 
-    setTimeout(() => {
-        btn.innerText = "Add to Cart 🛒";
-        btn.classList.remove("btn-success");
-    }, 1200);
-}
-</script>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ================= BOOTSTRAP JS ================= -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ================= PRODUCT LOGIC ================= -->
+    <script>
+
+        let currentIndex = 0;
+
+        const products = [
+            {
+                id: "rose-shine",
+                name: "Rose Shine Lip Gloss",
+                desc: "Soft pink gloss with hydration and shine.",
+                price: 85,
+                rating: "★★★★☆ (4.8)",
+                img: "WMD Images/1d17c720321f1f599dbb81b0232df102.jpg"
+            },
+            {
+                id: "clear-glow",
+                name: "Clear Glow Lip Gloss",
+                desc: "Lightweight natural shine gloss.",
+                price: 80,
+                rating: "★★★★☆ (4.5)",
+                img: "WMD Images/d7b22caa53775cad8a564e6ff8cb00aa.jpg"
+            },
+            {
+                id: "rose-kiss",
+                name: "Rosé Kiss Lip Gloss",
+                desc: "Soft tinted romantic gloss.",
+                price: 90,
+                rating: "★★★★★ (4.9)",
+                img: "WMD Images/c90494cd57249655b5122b6425912b66.jpg"
+            },
+            {
+                id: "midnight-bloom",
+                name: "Midnight Bloom Perfume",
+                desc: "Elegant floral fragrance for day and night.",
+                price: 250,
+                rating: "★★★★★ (4.9)",
+                img: "WMD Images/dbd285bd-33c6-41ae-b24a-54bb0a958fc2.d247ba7667e8a29cbcfd1c608358805b.webp"
+            },
+            {
+                id: "velvet-rose",
+                name: "Velvet Rose Perfume",
+                desc: "Soft romantic rose scent.",
+                price: 260,
+                rating: "★★★★☆ (4.8)",
+                img: "WMD Images/prod_35902_1_1_1.webp"
+            },
+            {
+                id: "oaty-goodness",
+                name: "Oaty Goodness Body Wash",
+                desc: "Gentle oat-based cleansing wash.",
+                price: 110,
+                rating: "★★★★☆ (4.6)",
+                img: "WMD Images/Oaty-Goodness-Body-Wash-720-ml-.jpg"
+            }
+        ];
+
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get("product");
+
+        let currentProduct =
+            products.find(p => p.id === productId) || products[0];
+
+        function renderProduct(p) {
+
+            document.getElementById("productName").innerText = p.name;
+            document.getElementById("productDesc").innerText = p.desc;
+            document.getElementById("productPrice").innerText = p.price;
+            document.getElementById("productRating").innerText = p.rating;
+            document.getElementById("productImage").src = p.img;
+
+            currentProduct = p;
+        }
+
+        renderProduct(currentProduct);
+
+        function changeProduct() {
+            currentIndex = (currentIndex + 1) % products.length;
+            renderProduct(products[currentIndex]);
+        }
+
+        function addToCart() {
+
+            let cart =
+                JSON.parse(localStorage.getItem("cart")) || [];
+
+            cart.push(currentProduct);
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            const btn = document.querySelector(".btn-dark");
+            btn.innerText = "Added ✔";
+            btn.classList.add("btn-success");
+
+            setTimeout(() => {
+                btn.innerText = "Add to Cart 🛒";
+                btn.classList.remove("btn-success");
+            }, 1200);
+        }
+
+    </script>
 
 </body>
-</html>
 
+</html>
 
 
 
